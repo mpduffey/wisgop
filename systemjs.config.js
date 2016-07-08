@@ -10,14 +10,20 @@
 
     '@angular':                   'node_modules/@angular',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
-    'rxjs':                       'node_modules/rxjs'
+    'rxjs':                       'node_modules/rxjs',
+    'jquery':                     'node_modules/dist/jquery.min.js',
+    'modules':                    'app/modules',
+    'angular2-grid':              'node_modules/angular2-grid/dist/directives',
+    'ag-grid-ng2':                'node_modules/ag-grid-ng2',
+    'ag-grid':                    'node_modules/ag-grid'
   };
 
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {
-    'app':                        { main: 'main.js',  defaultExtension: 'js' },
-    'rxjs':                       { defaultExtension: 'js' },
-    'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
+    'app':                        {main: 'main.js',  defaultExtension: 'js'},
+    'rxjs':                       {defaultExtension: 'js'},
+    'angular2-in-memory-web-api': {main: 'index.js', defaultExtension: 'js'},
+    'modules':                    {defaultExtension: 'js'}
   };
 
   var ngPackageNames = [
@@ -54,7 +60,8 @@
 
   var config = {
     map: map,
-    packages: packages
+    packages: packages,
+    defaultJSExtensions: true
   };
 
   System.config(config);
